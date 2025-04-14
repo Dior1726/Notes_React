@@ -52,10 +52,15 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #444;
   text-decoration: inherit;
+  transition: all 0.2s ease;
 }
 a:hover {
+  color: #535bf2;
+}
+
+a.active {
   color: #535bf2;
 }
 
@@ -66,7 +71,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #656bd6;
+}
+
+::selection {
+  background-color: #646cff;
+  color: white;
 }
 
 #root {
