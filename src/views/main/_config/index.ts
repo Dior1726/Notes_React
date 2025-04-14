@@ -1,26 +1,29 @@
+import HomePage from "../home_view/HomePage";
+import ProfilePage from "../profile_view/ProfilePage";
+
 export const mainRoutes = [
   {
     path: "",
-    name: "HomePage",
+    Component: HomePage,
   },
   {
-    path: "/profile",
-    name: "ProfilePage",
+    path: "profile",
+    Component: ProfilePage,
   },
-  {
-    path: "/archive",
-    name: "ArchivePage",
-  },
-  {
-    path: "create-note",
-    name: "CreateNotePage",
-  },
-  {
-    path: "trash",
-    name: "TrashPage",
-  },
-  {
-    path: "calendar",
-    name: "CalendarPage",
-  },
+  // {
+  //   path: "/archive",
+  //   name: "ArchivePage",
+  // },
+  // {
+  //   path: "create-note",
+  //   name: "CreateNotePage",
+  // },
+  // {
+  //   path: "trash",
+  //   name: "TrashPage",
+  // },
+  // {
+  //   path: "calendar",
+  //   name: "CalendarPage",
+  // },
 ];

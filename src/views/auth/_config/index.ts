@@ -1,7 +1,8 @@
+import LoginPage from "../login_view/LoginPage";
+
 export const authRoutes = [
   {
-    path: "/auth",
-    name: "LoginPage",
-    component: () => import("../login_view/LoginPage"),
+    path: "",
+    Component: LoginPage,
   },
 ];
