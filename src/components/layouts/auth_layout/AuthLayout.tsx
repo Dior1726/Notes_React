@@ -1,5 +1,7 @@
-export const MainLayout = () => {
-  return <div>AuthLayout</div>;
+import { Outlet } from "react-router";
+
+export const AuthLayout = () => {
+  return <Outlet />;
 };
 
-export default MainLayout;
+export default AuthLayout;
