@@ -1,8 +1,8 @@
-import ArchivePage from "../archive_view/ArchivePage";
-import CalendarPage from "../calendar_view/CalendarPage";
 import HomePage from "../home_view/HomePage";
-import ProfilePage from "../profile_view/ProfilePage";
 import TrashPage from "../trash_view/TrashPage";
+import ArchivePage from "../archive_view/ArchivePage";
+import ProfilePage from "../profile_view/ProfilePage";
+import CalendarPage from "../calendar_view/CalendarPage";
 
 export const mainRoutes = [
   {

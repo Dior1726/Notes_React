@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { NavLink } from "react-router";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
   return (
@@ -12,7 +12,7 @@ const LoginPage = () => {
         <div className='mt-10 flex flex-col gap-5'>
           <Input placeholder='Email' className='' />
           <Input placeholder='Password' className='' />
-          <NavLink to={"/main"} className='w-full block'>
+          <NavLink to={"/main/home"} className='w-full block'>
             <Button variant='accent' className='bg-indigo-500 h-10 mt-5 w-full'>
               Login
             </Button>
