@@ -4,7 +4,7 @@ const notes = [
   {
     title: "Note 1",
     content: "This is the content of note 1.",
-    type: "Personal",
+    type: "Work",
     created: "2023-01-29",
     author: "John Doe",
   },
@@ -18,9 +18,9 @@ const notes = [
   {
     title: "Note 3",
     content: "This is the content of note 3.",
-    type: "Personal",
+    type: "Team",
     created: "2022-10-01",
-    author: "Dor Carleone",
+    author: "Don Carleone",
   },
   {
     title: "Note 4",

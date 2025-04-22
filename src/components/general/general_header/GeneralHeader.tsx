@@ -1,4 +1,5 @@
-import { UserIcon, MenuIcon } from "lucide-react";
+import { useNavigate } from "react-router";
+import { UserIcon, MenuIcon, LogOutIcon } from "lucide-react";
 
 interface IState {
   isOpen: boolean;
@@ -6,6 +7,12 @@ interface IState {
 }
 
 const GeneralHeader = ({ isOpen, setIsOpen }: IState) => {
+  const navigate = useNavigate();
+
+  const logoutHandler = () => {
+    navigate("/");
+  };
+
   return (
     <div className='min-h-[60px] w-full bg-white flex items-center justify-between px-5 border-b border-slate-100'>
       <div
@@ -14,8 +21,16 @@ const GeneralHeader = ({ isOpen, setIsOpen }: IState) => {
       >
         <MenuIcon />
       </div>
-      <div className='w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center'>
-        <UserIcon />
+      <div className='flex gap-4'>
+        <div className='w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center'>
+          <UserIcon />
+        </div>
+        <div
+          className='w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center'
+          onClick={logoutHandler}
+        >
+          <LogOutIcon />
+        </div>
       </div>
     </div>
   );

@@ -10,8 +10,8 @@ const LoginPage = () => {
           Welcome to Notes!
         </h3>
         <div className='mt-10 flex flex-col gap-5'>
-          <Input placeholder='Email' className='' />
-          <Input placeholder='Password' className='' />
+          <Input placeholder='Email' className='h-10' />
+          <Input placeholder='Password' className='h-10' />
           <NavLink to={"/main/home"} className='w-full block'>
             <Button variant='accent' className='bg-indigo-500 h-10 mt-5 w-full'>
               Login
