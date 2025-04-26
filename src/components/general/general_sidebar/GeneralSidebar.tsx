@@ -27,7 +27,7 @@ const GeneralSidebar = ({ isOpen }: IState) => {
           className='flex items-center gap-2 px-5 py-3'
         >
           <NotebookIcon />
-          <div>All Notes</div>
+          <div>All Posts</div>
         </NavLink>
         <NavLink
           end

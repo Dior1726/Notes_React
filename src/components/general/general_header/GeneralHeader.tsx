@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate, NavLink } from "react-router";
 import { UserIcon, MenuIcon, LogOutIcon } from "lucide-react";
 
 interface IState {
@@ -11,6 +11,7 @@ const GeneralHeader = ({ isOpen, setIsOpen }: IState) => {
 
   const logoutHandler = () => {
     navigate("/");
+    localStorage.clear();
   };
 
   return (
@@ -22,9 +23,12 @@ const GeneralHeader = ({ isOpen, setIsOpen }: IState) => {
         <MenuIcon />
       </div>
       <div className='flex gap-4'>
-        <div className='w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center'>
+        <NavLink
+          to={"/main/profile"}
+          className='w-10 h-10 rounded-full bg-slate-100 !text-slate-600 flex items-center justify-center'
+        >
           <UserIcon />
-        </div>
+        </NavLink>
         <div
           className='w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center'
           onClick={logoutHandler}

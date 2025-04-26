@@ -1,6 +1,6 @@
 import ApiService from "@/network/axios";
 
-export default class NoteService {
+export default class PostService {
   static get() {
     return ApiService.get("/posts");
   }
