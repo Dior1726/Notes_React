@@ -1,9 +1,18 @@
+import { Button } from "@/components/ui/button";
 import { EllipsisVertical } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const PostCard = ({ post }: any) => {
   return (
     <div className='bg-white rounded-2xl shadow-xs p-4'>
-      <div className='flex justify-between items-center pb-2 border-b border-slate-200'>
+      <div className='flex justify-between items-center pb-2 border-b border-slate-100'>
         <div className='text-xs flex gap-1'>
           {post.tags.map((item: string) => (
             <div
@@ -19,10 +28,23 @@ const PostCard = ({ post }: any) => {
         </div>
       </div>
       <div className='text-slate-700 my-2'>{post.title}</div>
-      <div className='text-slate-500 text-sm mb-1'>
+      <div className='text-slate-500 text-sm mb-2'>
         {post.body.slice(0, 50)}...
       </div>
       <div className='flex justify-between items-center text-sm text-slate-600'></div>
+      <div className='border-t border-slate-100 pt-2 flex justify-end'>
+        <Dialog>
+          <DialogTrigger>
+            <Button>Read more...</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>{post.title}</DialogTitle>
+              <DialogDescription>{post.body}</DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      </div>
     </div>
   );
 };
