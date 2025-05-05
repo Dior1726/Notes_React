@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { EllipsisVertical } from "lucide-react";
+import { HeartIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -23,11 +23,11 @@ const PostCard = ({ post }: any) => {
             </div>
           ))}
         </div>
-        <div>
-          <EllipsisVertical className='text-slate-600' size={"14px"} />
-        </div>
+        <Button variant={"ghost"}>
+          <HeartIcon className='text-slate-600' size={"14px"} />
+        </Button>
       </div>
-      <div className='text-slate-700 my-2'>{post.title}</div>
+      <div className='text-slate-700 my-2 font-semibold'>{post.title}</div>
       <div className='text-slate-500 text-sm mb-2'>
         {post.body.slice(0, 50)}...
       </div>

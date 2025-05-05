@@ -2,8 +2,8 @@ import { NavLink } from "react-router";
 import {
   TrashIcon,
   ArchiveIcon,
-  CalendarIcon,
   NotebookIcon,
+  ListCheckIcon,
 } from "lucide-react";
 
 interface IState {
@@ -31,11 +31,11 @@ const GeneralSidebar = ({ isOpen }: IState) => {
         </NavLink>
         <NavLink
           end
-          to={"/main/calendar"}
+          to={"/main/todos"}
           className='flex items-center gap-2 px-5 py-3'
         >
-          <CalendarIcon />
-          <div>Calendar</div>
+          <ListCheckIcon />
+          <div>Todos</div>
         </NavLink>
         <NavLink
           end

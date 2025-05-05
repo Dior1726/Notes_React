@@ -2,7 +2,7 @@ import HomePage from "../home_view/HomePage";
 import TrashPage from "../trash_view/TrashPage";
 import ArchivePage from "../archive_view/ArchivePage";
 import ProfilePage from "../profile_view/ProfilePage";
-import CalendarPage from "../calendar_view/CalendarPage";
+import TodosPage from "../todos_view/TodosPage";
 
 export const mainRoutes = [
   {
@@ -22,7 +22,7 @@ export const mainRoutes = [
     Component: TrashPage,
   },
   {
-    path: "calendar",
-    Component: CalendarPage,
+    path: "todos",
+    Component: TodosPage,
   },
 ];
