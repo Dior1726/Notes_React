@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router";
 import { router } from "./router";
 import { Provider } from "react-redux";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { Toaster } from "sonner";
 import store from "./store";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
         <RouterProvider router={router} />
+        <Toaster />
       </Provider>
     </QueryClientProvider>
   );

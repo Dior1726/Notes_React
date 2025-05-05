@@ -16,9 +16,7 @@ const HomePage = () => {
       )}
       <div className='grid grid-cols-3 gap-5'>
         {data &&
-          data.posts.map((post: any, index: number) => (
-            <PostCard post={post} key={index} />
-          ))}
+          data.posts.map((post: any) => <PostCard post={post} key={post.id} />)}
       </div>
     </>
   );

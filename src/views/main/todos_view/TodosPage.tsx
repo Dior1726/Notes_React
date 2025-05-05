@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useDispatch, useSelector } from "react-redux";
-import { CheckedState } from "@radix-ui/react-checkbox";
 import { RootState } from "@/store";
 import { getTodos } from "./api/get_todos";
 import { updateTodo } from "./api/update_todo";
-import { Checkbox } from "@/components/ui/checkbox";
 import { setTodos, toggleTodo } from "@/store/slices/todos_slice";
+import { Button } from "@/components/ui/button";
+import TodoItem from "./components/todo_item/TodoItem";
 
 const TodosPage = () => {
   const dispatch = useDispatch();
@@ -39,24 +39,18 @@ const TodosPage = () => {
 
   return (
     <div className='bg-white rounded-xl p-5 max-w-2xl mx-auto shadow-sm'>
-      <h1 className='text-xl mb-5 font-semibold text-center'>Todos</h1>
+      <div className='flex items-center justify-between mb-5'>
+        <h1 className='text-xl  font-semibold text-center'>Todos</h1>
+        <Button>Add Todo</Button>
+      </div>
       {isLoading && <p className='text-center'>Loading...</p>}
       {todos &&
         todos.map((todo: any) => (
-          <label
-            htmlFor={todo.id}
+          <TodoItem
             key={todo.id}
-            className='flex items-center gap-2 justify-between py-2 border-b border-gray-200 last:border-b-0 cursor-pointer select-none'
-          >
-            <div>{todo.todo}</div>
-            <Checkbox
-              checked={todo.completed}
-              id={todo.id}
-              onCheckedChange={(value: CheckedState) =>
-                onChangeHandler(value, todo.id)
-              }
-            />
-          </label>
+            todo={todo}
+            onChangeHandler={onChangeHandler}
+          />
         ))}
     </div>
   );
