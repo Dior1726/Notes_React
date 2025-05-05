@@ -2,7 +2,7 @@ import ApiService from "@/network/axios";
 
 export default class TodoService {
   static get() {
-    return ApiService.get("/todos");
+    return ApiService.get("/todos?limit=15");
   }
 
   static getById(id: number) {
