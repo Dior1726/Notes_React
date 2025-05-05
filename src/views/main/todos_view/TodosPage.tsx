@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { RootState } from "@/store";
 import { getTodos } from "./api/get_todos";
+import { updateTodo } from "./api/update_todo";
 import { Checkbox } from "@/components/ui/checkbox";
 import { setTodos, toggleTodo } from "@/store/slices/todos_slice";
 
@@ -16,14 +17,24 @@ const TodosPage = () => {
     queryFn: () => getTodos(),
   });
 
+  const { mutate } = useMutation({
+    mutationFn: ({ id, payload }: any) => updateTodo(id, payload),
+    onSuccess: (data) => {
+      dispatch(toggleTodo({ id: data.id, completed: data.completed }));
+    },
+  });
+
   useEffect(() => {
     if (data) {
       dispatch(setTodos(data.todos));
     }
   }, [data, dispatch]);
 
-  const onChangeHandler = (value: CheckedState, id: number) => {
-    dispatch(toggleTodo({ id, completed: value }));
+  const onChangeHandler = (value: any, id: number) => {
+    const payload = {
+      completed: value,
+    };
+    mutate({ id, payload });
   };
 
   return (

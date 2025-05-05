@@ -12,4 +12,8 @@ export default class TodoService {
   static create(payload: any) {
     return ApiService.post("/todos/add", payload);
   }
+
+  static update(id: number, payload: any) {
+    return ApiService.put(`/todos/${id}`, payload);
+  }
 }
