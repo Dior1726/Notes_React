@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import {
   TrashIcon,
-  ArchiveIcon,
+  ShoppingCartIcon,
   NotebookIcon,
   ListCheckIcon,
 } from "lucide-react";
@@ -39,11 +39,11 @@ const GeneralSidebar = ({ isOpen }: IState) => {
         </NavLink>
         <NavLink
           end
-          to={"/main/archive"}
+          to={"/main/products"}
           className='flex items-center gap-2 px-5 py-3'
         >
-          <ArchiveIcon />
-          <div>Archive</div>
+          <ShoppingCartIcon />
+          <div>Products</div>
         </NavLink>
         <NavLink
           end
