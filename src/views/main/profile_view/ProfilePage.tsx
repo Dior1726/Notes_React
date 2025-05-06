@@ -13,6 +13,7 @@ const ProfilePage = () => {
       {isLoading && (
         <div className='flex justify-center items-center'>Loading...</div>
       )}
+      <div className='text-xl mb-5 font-semibold'>My Profile</div>
       {data && <ProfileCard profile={data} />}
     </div>
   );
