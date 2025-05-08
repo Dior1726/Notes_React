@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import {
-  TrashIcon,
+  // TrashIcon,
   ShoppingCartIcon,
   NotebookIcon,
   ListCheckIcon,
@@ -45,14 +45,14 @@ const GeneralSidebar = ({ isOpen }: IState) => {
           <ShoppingCartIcon />
           <div>Products</div>
         </NavLink>
-        <NavLink
+        {/* <NavLink
           end
           to={"/main/trash"}
           className='flex items-center gap-2 px-5 py-3'
         >
           <TrashIcon />
           <div>Trash</div>
-        </NavLink>
+        </NavLink> */}
       </div>
     </div>
   );
