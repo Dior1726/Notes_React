@@ -1,10 +1,5 @@
 import { NavLink } from "react-router";
-import {
-  // TrashIcon,
-  ShoppingCartIcon,
-  NotebookIcon,
-  ListCheckIcon,
-} from "lucide-react";
+import { ShoppingCartIcon, NotebookIcon, ListCheckIcon } from "lucide-react";
 
 interface IState {
   isOpen: boolean;
@@ -45,14 +40,6 @@ const GeneralSidebar = ({ isOpen }: IState) => {
           <ShoppingCartIcon />
           <div>Products</div>
         </NavLink>
-        {/* <NavLink
-          end
-          to={"/main/trash"}
-          className='flex items-center gap-2 px-5 py-3'
-        >
-          <TrashIcon />
-          <div>Trash</div>
-        </NavLink> */}
       </div>
     </div>
   );
