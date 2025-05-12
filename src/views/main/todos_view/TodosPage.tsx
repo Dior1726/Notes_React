@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { getTodos } from "./api/get_todos";
 import { updateTodo } from "./api/update_todo";
-import { createTodo } from "./components/create_todo";
+import { createTodo } from "./api/create_todo";
 import { setTodos, toggleTodo } from "@/store/slices/todos_slice";
 import { Button } from "@/components/ui/button";
 import {
